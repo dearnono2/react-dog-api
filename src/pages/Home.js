@@ -68,7 +68,9 @@ const Wrapper = styled.div`
     }
   }
   .container {
-    padding: 80px 10px 30px;
+    max-width: 1180px;
+    width: 100%;
+    padding: 80px 0 30px;
     margin: 0 auto;
     h2 {
       font-size: 38px;
