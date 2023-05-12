@@ -12,16 +12,17 @@ const Home = () => {
     axios
       .get("https://api.thedogapi.com/v1/breeds")
       .then(function (response) {
-        // response
+        // 호출 성공시 실행
         setDogs(response.data);
         console.log(response);
       })
       .catch(function (error) {
-        // 오류발생시 실행
+        // 오류 발생시 실행
         console.log(error);
       })
-      .then(function () {
+      .finally(function () {
         // 항상 실행
+        console.log("호출 완료");
       });
   }, []);
 

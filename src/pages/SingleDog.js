@@ -12,6 +12,7 @@ const SingleDog = () => {
     axios
       .get(`https://api.thedogapi.com/v1/breeds/search?q=${name}`)
       .then(function (response) {
+        // 호출 성공시 실행
         setDog(response.data);
         console.log(response);
       })
@@ -19,7 +20,7 @@ const SingleDog = () => {
         // 오류발생시 실행
         console.log(error);
       })
-      .then(function () {
+      .finally(function () {
         // 항상 실행
       });
   }, [name]);
@@ -92,6 +93,7 @@ const Wrapper = styled.div`
             display: block;
             font-size: 18px;
             font-weight: 600;
+            margin-bottom: 4px;
           }
         }
       }
