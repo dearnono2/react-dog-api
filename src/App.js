@@ -1,19 +1,20 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import SingleDog from "./pages/SingleDog";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route exact path="/" element={<Home />}></Route>
           <Route path="/:name" element={<SingleDog />}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
